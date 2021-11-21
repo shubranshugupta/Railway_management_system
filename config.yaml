@@ -1,0 +1,5 @@
+dbserver:
+  host: localhost
+  user: root
+  password: Arbs24022001@
+  database: railway

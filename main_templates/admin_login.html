@@ -1,0 +1,38 @@
+<html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="shortcut icon" href=""> <!-- insert img -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='admin_login.css') }}">
+</head>
+
+<body>
+    <form action="/admin_authentication" method="post">
+        <div class="imgcontainer">
+            <img src="{{ url_for('static', filename='images/admin_logo.png') }}" alt="Avatar" class="avatar">
+        </div>
+
+        <div class="container">
+            <label for="psw"><b>User ID</b></label>
+            <input type="text" placeholder="Enter User ID" name="uid" required>
+
+            <br>
+
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="password" required>
+
+            <button type="submit">Login</button>
+        </div>
+
+        <div class="container">
+            <button type="button" class="returnhome" onclick="window.location.href='/'">Return Home</button>
+        </div>
+    </form>
+</body>
+
+</html>

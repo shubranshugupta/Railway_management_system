@@ -1,0 +1,47 @@
+<html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New User</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="shortcut icon" href=""> <!-- insert img -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='new_user.css') }}">
+</head>
+
+<body>
+    <form action="/new_user_registration" method="post">
+        <div class="imgcontainer">
+            <img src="{{ url_for('static', filename='images/user_logo.png') }}" alt="Avatar" class="avatar">
+        </div>
+
+        <div class="container">
+            <label for="psw"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="emailid" required>
+
+            <br>
+
+            <label for="psw"><b>Mobile</b></label>
+            <input type="text" placeholder="Enter Mobile No." name="mobileno" required>
+
+            <br>
+
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="password" required>
+
+            <br>
+
+            <label for="psw"><b>DOB: </b></label>
+            <input type="date" name="dob" required>
+
+            <button type="submit">Register</button>
+        </div>
+        <div class="container">
+            <button type="button" class="returnhome" onclick="window.location.href='/'">Return Home</button>
+        </div>
+    </form>
+</body>
+
+</html>
